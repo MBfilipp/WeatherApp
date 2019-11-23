@@ -21,8 +21,6 @@ class App extends React.Component {
     const API_URL = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${API_KEY}`);
     const JSON_API_URL = await API_URL.json();
 
-    console.log(JSON_API_URL);
-
     if(JSON_API_URL.name) {
       this.setState({
         name: JSON_API_URL.name,
